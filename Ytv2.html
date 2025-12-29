@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONIMUSHA PLAYER</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .main-box {
+            background-color: #111;
+            border: 2px solid #ff0000;
+            padding: 25px;
+            border-radius: 12px;
+            width: 95%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+        }
+
+        h1 { color: #ff0000; margin-top: 0; letter-spacing: 5px; font-size: 2.5em; text-shadow: 2px 2px #330000; }
+
+        .watch-time-display {
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            border: 1px solid #333;
+            color: #ff0000;
+        }
+
+        .input-area { margin-bottom: 20px; text-align: left; }
+        
+        label { display: block; margin-bottom: 8px; font-size: 13px; color: #888; text-transform: uppercase; }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            background: #222;
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input:focus { outline: none; border-color: #ff0000; }
+
+        .play-btn {
+            background-color: #ff0000;
+            color: white;
+            padding: 18px;
+            width: 100%;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            letter-spacing: 2px;
+        }
+
+        .play-btn:hover { background-color: #b30000; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3); }
+
+        #video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 15px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .video-box {
+            background: #111;
+            padding: 5px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-box">
+        <h1>ONIMUSHA</h1>
+
+        <div class="watch-time-display">
+            TIME: <span id="timer">00:00:00</span>
+        </div>
+
+        <div class="input-area">
+            <label>YouTube Video Link:</label>
+            <input type="text" id="videoLink" value="https://youtu.be/i4Ot760mZ-Q">
+        </div>
+
+        <div class="input-area">
+            <label>View အရေအတွက် (Manual):</label>
+            <input type="number" id="videoCount" value="5" min="1" max="50">
+        </div>
+
+        <button class="play-btn" onclick="startApp()">START PLAYING</button>
+    </div>
+
+    <div id="video-grid"></div>
+
+    <script>
+        let seconds = 0;
+        let timerInterval = null;
+
+        function extractID(url) {
+            const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=|shorts\/)([^#\&\?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length == 11) ? match[2] : null;
+        }
+
+        function startApp() {
+            const url = document.getElementById('videoLink').value;
+            const count = parseInt(document.getElementById('videoCount').value) || 1;
+            const videoId = extractID(url);
+            const grid = document.getElementById('video-grid');
+
+            if (!videoId) {
+                alert("YouTube Link မှားနေပါတယ်။ ပြန်စစ်ပေးပါ။");
+                return;
+            }
+
+            // Reset UI and Timer
+            grid.innerHTML = '';
+            seconds = 0;
+            updateTimerDisplay();
+            if(timerInterval) clearInterval(timerInterval);
+            
+            // Create Videos
+            for (let i = 0; i < count; i++) {
+                const div = document.createElement('div');
+                div.className = 'video-box';
+                div.innerHTML = `
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&playlist=${videoId}&loop=1" 
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                        </iframe>
+                    </div>`;
+                grid.appendChild(div);
+            }
+
+            // Real Watch Time Timer (1 second = 1 second)
+            timerInterval = setInterval(() => {
+                seconds++; 
+                updateTimerDisplay();
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const h = Math.floor(seconds / 3600).toString().padStart(2, '0');
+            const m = Math.floor((seconds % 3600) / 60).toString().padStart(2, '0');
+            const s = (seconds % 60).toString().padStart(2, '0');
+            document.getElementById('timer').innerText = `${h}:${m}:${s}`;
+        }
+    </script>
+
+</body>
+</html>
