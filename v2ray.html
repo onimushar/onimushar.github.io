@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onimusha - Full Setup</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 20px 120px 20px;
+            margin: 0;
+        }
+
+        .title {
+            font-size: 35px;
+            font-weight: 900;
+            margin: 20px 0 30px 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #ff0000;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 380px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 45px;
+        }
+
+        .location {
+            align-self: flex-start;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 15px;
+            color: #ffffff; /* Server Name - White */
+            letter-spacing: 0.5px;
+        }
+
+        .white-box {
+            background-color: #111;
+            width: 100%;
+            min-height: 80px;
+            height: auto;
+            max-height: 120px;
+            border-radius: 8px;
+            color: #ccc;
+            padding: 15px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            box-sizing: border-box;
+            text-align: center;
+            border: 1px solid #ff0000;
+            word-break: break-all;
+            overflow-y: auto;
+        }
+
+        .copy-btn {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 10px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: -15px;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+            z-index: 5;
+            transition: 0.2s;
+        }
+
+        .copy-btn:active { transform: scale(0.95); }
+
+        /* --- Bottom Nav (Red Theme) --- */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 10px;
+            border-top: 2px solid #ff0000;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+            flex: 1;
+            margin: 0 5px;
+            padding: 12px 0;
+            border-radius: 8px;
+            background-color: #ff0000;
+            box-shadow: 0 2px 5px rgba(255, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        /* --- Ads Pop-up --- */
+        .ads-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); display: none; justify-content: center; align-items: center; z-index: 10000; }
+        .ads-content { background: #111; border: 2px solid #ff0000; color: white; width: 85%; max-width: 350px; padding: 30px 20px; border-radius: 20px; text-align: center; position: relative; }
+        .close-ads { position: absolute; top: -10px; right: -10px; background: #ff0000; color: white; border: none; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; font-weight: bold; }
+        .pop-btn { padding: 12px; text-decoration: none; color: white; border-radius: 10px; font-weight: bold; display: block; margin-top: 10px; background: #222; border: 1px solid #ff0000; }
+
+        .toast { position: fixed; top: 20px; background: #ff0000; color: white; padding: 12px 25px; border-radius: 50px; display: none; z-index: 11000; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div id="toast" class="toast">Copied Success! ✅</div>
+
+    <div class="ads-overlay" id="adsBox">
+        <div class="ads-content">
+            <button class="close-ads" onclick="closeAds()">X</button>
+            <h3 style="margin:0; color:#ff0000;">Premium Vpn Key ဝယ်ယူရန်</h3>
+            <p style="color:#aaa;"> ❄︎ 50GB - 3000 Ks <br> ❄︎ 100GB - 5000 Ks <br> ❄︎ 200GB - 10000 Ks</p>
+            <a href="https://t.me/onimushatech" class="pop-btn">Telegram Channel</a>
+            <a href="https://www.facebook.com/onimushamm" class="pop-btn">Facebook Page</a>
+        </div>
+    </div>
+
+    <div class="title">ONIMUSHA</div>
+
+    <div class="container">
+        <div class="location">Singapore 🇸🇬 Server 1</div>
+        <div class="white-box" id="c1">vless://36de8322-91ef-442a-bdff-b0d3be794482@66.42.61.103:443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.apple.com&fp=chrome&security=reality&pbk=GzxM2bh0UoMV3QnP2VJK1NTLlsSVMPUKFi53k1sa_Ss&sid=63a41c2f9ac8bea4#ONIMUSHA%20%F0%9F%87%B8%F0%9F%87%AC
+        </div><button class="copy-btn" onclick="copyAction('c1')">copy text</button>
+    </div>
+
+    <div class="container">
+        <div class="location">Japan 🇯🇵 Server 2</div>
+        <div class="white-box" id="c2">
+        vless://86b414b6-966e-4f6d-ab16-32049ef732d3@47.245.38.111:443/?type=tcp&encryption=none&flow=&sni=www.autodesk.com&fp=chrome&security=reality&pbk=y167aJhpgWWjltY4UCir_uu8Mj__Hkc1W4etD0QXYH4&sid=860705e716cbe6ed#ONIMUSHA%20%F0%9F%87%AF%F0%9F%87%B5%20
+        </div>
+        <button class="copy-btn" onclick="copyAction('c2')">copy text</button>
+    </div>
+
+    <div class="container">
+        <div class="location">Netherlands 🇳🇱 Server 3</div>
+        <div class="white-box" id="c3">ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.218:8080#ONIMUSHA%20%F0%9F%87%B3%F0%9F%87%B1%20Netherlands%20
+        </div>
+        <button class="copy-btn" onclick="copyAction('c3')">copy text</button>
+    </div>
+
+    <div class="container">
+        <div class="location">Singapore 🇸🇬 Server 4</div>
+        <div class="white-box" id="c4">vless://36de8322-91ef-442a-bdff-b0d3be794482@66.42.61.103:443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.apple.com&fp=chrome&security=reality&pbk=GzxM2bh0UoMV3QnP2VJK1NTLlsSVMPUKFi53k1sa_Ss&sid=63a41c2f9ac8bea4#Onimusha%20%F0%9F%87%B8%F0%9F%87%AC
+        </div>
+        <button class="copy-btn" onclick="copyAction('c4')">copy text</button>
+    </div>
+
+    <div class="container">
+        <div class="location">United Kingdom 🇬🇧 Server 5</div>
+        <div class="white-box" id="c5">
+      ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.217:8080#ONIMUSHA%20%F0%9F%87%AC%F0%9F%87%A7
+        </div>
+        <button class="copy-btn" onclick="copyAction('c5')">copy text</button>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="https://onimushar.github.io/" class="nav-btn">Home</a>
+        <a href="#" class="nav-btn">Manual</a>
+        <a href="https://t.me/OnimushaPremiumHD" class="nav-btn">Download</a>
+        <a href="https://t.me/onimushatech" class="nav-btn">Telegram</a>
+    </div>
+
+    <script>
+        window.onload = () => setTimeout(() => document.getElementById("adsBox").style.display = "flex", 1000);
+        function closeAds() { document.getElementById("adsBox").style.display = "none"; }
+        function copyAction(id) {
+            var text = document.getElementById(id).innerText;
+            var el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            var toast = document.getElementById("toast");
+            toast.style.display = "block";
+            setTimeout(() => toast.style.display = "none", 1500);
+        }
+    </script>
+</body>
+</html>
