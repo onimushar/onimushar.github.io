@@ -3,212 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONIMUSHA</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <title>Onimusha Tech - Glow Edition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Smooth Scrolling */
+        html { scroll-behavior: smooth; }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+        
+        body { background-color: #000; color: #fff; padding-top: 125px; }
+
+        /* Navigation Header */
+        header {
+            position: fixed;
+            top: 0; width: 100%;
+            background: #111;
+            z-index: 1000;
+            border-bottom: 2px solid #ff0000;
+        }
+
+        .logo {
+            text-align: center;
+            padding: 15px 15px 5px 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Category Bar */
+        .cat-bar {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px;
+            gap: 10px;
+            scrollbar-width: none;
+        }
+        .cat-bar::-webkit-scrollbar { display: none; }
+
+        .cat-btn {
+            padding: 10px 20px;
+            background: #222;
+            color: #fff;
+            border: 1px solid #333;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: 0.3s;
+        }
+        .cat-btn:active { background: #ff0000; box-shadow: 0 0 10px #ff0000; }
+
+        /* Content Sections */
+        section { padding: 20px; border-bottom: 1px solid #222; }
+        .section-title {
+            color: #ff0000;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 5px solid #ff0000;
+            text-transform: uppercase;
+        }
+
+        /* Post Cards with Glow Effect (Social Icons ကဲ့သို့) */
+        .card {
+            background: #0d0d0d;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #222;
+            border-left: 4px solid #ff0000;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Card ကို နှိပ်လိုက်လျှင် ဖြစ်ပေါ်မည့် Effect */
+        .card:active {
+            background: #1a0000; /* အနီရောင်ဖျော့ဖျော့ နောက်ခံ */
+            border-color: #ff0000;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4); /* Glow Effect */
+            transform: scale(0.97);
+        }
+
+        .card h3 { font-size: 1.15rem; margin-bottom: 8px; color: #fff; transition: 0.3s; }
+        .card p { font-size: 0.9rem; color: #aaa; line-height: 1.5; }
+        
+        /* နှိပ်လိုက်ရင် စာသားပါ လင်းလာစေရန် */
+        .card:active h3 { color: #ff0000; }
+
+        /* Modern Social Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 50px 20px;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .social-icons a {
+            color: #ff0000;
+            background: transparent;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.3s ease;
+            border: 2px solid #ff0000;
+        }
+
+        .social-icons a:active {
+            background: #ff0000;
+            color: #fff;
+            box-shadow: 0 0 20px #ff0000;
+            transform: translateY(-5px);
+        }
+
+        .copyright { color: #444; font-size: 0.75rem; letter-spacing: 1px; }
+    </style>
 </head>
-<style>
-    
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000000; 
-    color: #fff; 
-}
-
-
-.site-header {
-    background-color: #333; 
-    text-align: center;
-    padding: 20px;
-}
-
-.site-header h1,
-.site-header p {
-    color: #4CAF50; 
-}
-
-
-.navbar {
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 20px;
-}
-
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar ul li {
-    display: inline;
-    margin-right: 2px;
-}
-
-.navbar ul li a {
-   color: #333;
-    text-decoration: none;
-    font-weight: bold;background-color: #FFFF00; 
-    padding: 6px 20px;
-    border: 100px;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: background-color 0.3s; 
-}
-#destaque {
-    padding: 20px;
-}
-.video-container {
-            max-width: 100%;
-            width: 100%; 
-}
-
-        
-
-#destaque h2 {
-    text-align: center;
-}
-
-.produto {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: #333; 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-
-.produto img {
-    width: 150px;
-    margin-right: 20px;
-}
-
-.info {
-    flex: 1;
-}
-
-.info h3 {
-    margin: 0;
-    color: #fff; 
-}
-
-.info p {
-    margin: 5px 0;
-    color: #ccc; 
-}
-
-button {
-    background-color: #4CAF50; 
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #45a049; 
-}
-.site-footer {
-    background-color: #212121; 
-    text-align: center;
-    padding: 20px;
-}
-
-.site-footer p {
-    color: #ccc;
-}
-</style>
 <body>
-    <header class="site-header">
-        <h1>ONIMUSHA BOX</h1>
-        <p></p>
+
+    <header>
+        <div class="logo">ONIMUSHA</div>
+        <div class="cat-bar">
+            <button class="cat-btn" onclick="scrollToId('tool')">TOOL</button>
+            <button class="cat-btn" onclick="scrollToId('tutorial')">TUTORIAL</button>
+            <button class="cat-btn" onclick="scrollToId('adult')">18+</button>
+            <button class="cat-btn" onclick="scrollToId('gaming')">GAMING</button>
+        </div>
     </header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#main">MAIN</a></li>
-            <li><a href="#main1">MAIN 1</a></li>
-            <li><a href="#18+">18+Site</a></li>
-        </ul>
-    </nav>
-    <section id="main">
-        <div class="video-container">
-        <img width="400" height="150" src="https://i.ibb.co/dkhcKHM/Picsart-24-09-18-20-15-43-981.png"> </iframe>
-    </div>
-        <h2>MAIN</h2>
-  
-        <div class="produto">
-            <img src="https://i.ibb.co/h8RtDy8/Picsart-24-09-17-21-13-31-902.jpg alt="Produto 2">
-            <div class="info">
-                <h3>view</h3>
-                <p>YouTube View</p>
-                 <a href="https://onimusha-tech.github.io/YouTubeView/ytview.html"/>
-                <button>ဝင်ရောက်ရန်</button></a>
-            </div>
+
+    <section id="tool">
+        <h2 class="section-title">Useful Tools</h2>
+        <div class="card" onclick="window.location.href='https://onimushar.github.io/v2ray.html';">
+            <h3>V2RAY Key များ ရယူရန်</h3>
+            <p>အင်တာနက်လုံခြုံရေး မြန်နှုန်း နှင့် မြန်မာပြည်အတွက် အခမဲ့ Key များ</p>
         </div>
-        
-    </section>
-    <section id="main1">
-        <h2>MAIN 1</h2>
-        <div class="produto">
-            <img src="https://i.ibb.co/xXMpRSC/Picsart-24-09-18-11-35-01-814.jpg" alt="Produto 1">
-            <div class="info">
-                <h3>V2ray Key</h3>
-                <p>Premium Free Key</p>
-                <button>ဝင်ရောက်ရန်</button>
-            </div>
-        </div>
-        
-    </section>
-    
-    <section id="18+">
-         <h2>18+ Sites</h2>
-    
-        </div>
-        <div class="produto">
-            <img src="https://i.ibb.co/FYp4M9h/Picsart-24-09-17-21-53-14-186.jpg" alt="Produto 3">
-            <div class="info">
-                <h3>Porn Hub</h3>
-                <p>Hot porn videos </p>
-                 <a href="https://www.pornhub.com/">
-                <button>ဝင်ရောက်ရန်</button></a>
-            </div>
-        </div>
-            <div class="produto">
-            <img src="https://i.ibb.co/MBWTrR7/Picsart-24-09-18-18-53-42-904.jpg" alt="Produto 3">
-            <div class="info">
-                <h3>Xnxx</h3>
-                <p>Hot porn videos </p>
-                 <a href="https://www.xnxx.tv/">
-                <button>ဝင်ရောက်ရန်</button></a>
-            </div>
-        </div>
-        </div>
-        <div class="produto">
-            <img src="https://i.ibb.co/VwM2qzj/Picsart-24-09-19-17-43-54-463.jpg" alt="Produto 3">
-            <div class="info">
-                <h3>Xvideo</h3>
-                <p>Hot porn videos </p>
-                 <a href="https://www.xv-videos1.com/">
-                <button>ဝင်ရောက်ရန်</button></a>
-            </div>
-        </div>
-        </div>
-        <div class="produto">
-            <img src="https://i.ibb.co/bg7FPFz/Picsart-24-09-19-17-51-31-205.jpg" alt="Produto 3">
-            <div class="info">
-                <h3>Xhamster</h3>
-                <p>Hot porn videos </p>
-                 <a href="https://xhamster.com/">
-                <button>ဝင်ရောက်ရန်</button></a>
-            </div>
+        <div class="card" onclick="window.location.href='YOUR_LINK';">
+            <h3>Ad-Blocker Pro</h3>
+            <p>ဝက်ဘ်ဆိုက်တွေက ကြော်ငြာတွေကို အထိရောက်ဆုံး ပိတ်နည်း။</p>
         </div>
     </section>
-    <footer class="site-footer">
-        <p>© 2024 ONIMUSHA TEAM</p>
-<a href="https://t.me/onimushatech">TELEGRAM</a></footer>
+
+    <section id="tutorial">
+        <h2 class="section-title">Tutorials</h2>
+        <div class="card" onclick="window.location.href='YOUR_LINK';">
+            <h3>Facebook Security</h3>
+            <p>အကောင့် Hack မခံရအောင် Two-Step Verification ဖွင့်နည်း လမ်းညွှန်။</p>
+        </div>
+    </section>
+
+    <section id="adult">
+        <h2 class="section-title">18+ Content</h2>
+        <div class="card" onclick="window.location.href='https://www.pornhub.com';">
+            <h3>Pron Hub</h3>
+            <p>အရွယ်ရောက်သူများအတွက် အကောင်းဆုံး Entertainment</p>
+        </div>
+         <div class="card" onclick="window.location.href='https://www.xnxx.com';">
+            <h3>XNXX</h3>
+            <p>အချိန်မရွေး ကြည့်ရှုနိုင်တဲ့ Video များ</p>
+        </div>
+    </section>
+
+    <section id="gaming">
+        <h2 class="section-title">Gaming</h2>
+        <div class="card" onclick="window.location.href='YOUR_LINK';">
+            <h3>Low Ping Guide</h3>
+            <p>Online ဂိမ်းဆော့တဲ့အခါ Ping ကျပြီး ပိုမြန်အောင် လုပ်ဆောင်နည်းများ။</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/onimushamm" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://youtube.com/@onimushatech353?si=SD_nu61uXr-POWfW" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="TG_LINK" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+            <a href="TK_LINK" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p class="copyright">© 2026 ONIMUSHA TECH HUB</p>
+    </footer>
+
+    <script>
+        function scrollToId(id) {
+            const element = document.getElementById(id);
+            const headerOffset = 125;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+        }
+    </script>
+
 </body>
 </html>
