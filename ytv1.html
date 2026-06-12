@@ -1,6 +1,57 @@
 <!DOCTYPE html>
 <html dir='ltr' lang='en-GB'>
 <head>
+	<!DOCTYPE html>
+<html>
+<head>
+    <title>Timer</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #timer{
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="timer">00:00</div>
+
+    <button onclick="startTimer()">Start</button>
+
+    <script>
+        let seconds = 0;
+        let minutes = 0;
+        let timer;
+
+        function startTimer() {
+            clearInterval(timer);
+
+            timer = setInterval(() => {
+                seconds++;
+
+                if (seconds === 60) {
+                    minutes++;
+                    seconds = 0;
+                }
+
+                document.getElementById("timer").innerText =
+                    String(minutes).padStart(2, '0') + ":" +
+                    String(seconds).padStart(2, '0');
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
   
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
 <title>YANG</title>
