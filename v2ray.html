@@ -444,10 +444,10 @@
 
     <div class="container">
         <div class="server-header">
-            <div class="location">Germany 🇩🇪 Server 1</div>
+            <div class="location">Netherlands 🇳🇱 Server 1</div>
             <div class="ping-status"><span class="ping-dot"></span>Active</div>
         </div>
-        <div class="white-box" id="c1">ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp1Uk91RXFzTDhJVU1NVmI0d0R3bkdV@57.129.121.230:10443#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20Onimusha</div>
+        <div class="white-box" id="c1">ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@193.29.139.189:8080#%F0%9F%87%B3%F0%9F%87%B1%20Netherlands%20Onimusha</div>
         <button class="copy-btn" onclick="copyAction('c1')">copy</button>
     </div>
 
@@ -456,25 +456,25 @@
             <div class="location">Netherlands 🇳🇱 Server 2</div>
             <div class="ping-status"><span class="ping-dot"></span>Active</div>
         </div>
-        <div class="white-box" id="c2">ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpyTWVKaGlhOUhoQ3cxaEdjeGVWRlFm@195.93.253.245:49137#%F0%9F%87%B3%F0%9F%87%B1%20Netherlands%20Onimusha</div>
+        <div class="white-box" id="c2">ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpad0hEYUI1OWV2VVB0cHdmWlQyRkE1@195.93.253.245:49137#%F0%9F%87%B3%F0%9F%87%B1%20%20Netherlands%20ONIMUSHA%20%282%29</div>
         <button class="copy-btn" onclick="copyAction('c2')">copy</button>
     </div>
 
     <div class="container">
         <div class="server-header">
-            <div class="location">France 🇫🇷 Server 3</div>
+            <div class="location">Germany 🇩🇪 Server 3</div>
             <div class="ping-status"><span class="ping-dot"></span>Active</div>
         </div>
-        <div class="white-box" id="c3">ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3OGI2ZTkzZTU0MjI1ODAz@51.75.168.50:26179#%F0%9F%87%AB%F0%9F%87%B7%20France%20Onimusha</div>
+        <div class="white-box" id="c3">ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpQV3BqUG8zdHFoUE40eVJa@8.209.74.72:20001#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20Onimusha</div>
         <button class="copy-btn" onclick="copyAction('c3')">copy</button>
     </div>
 
     <div class="container">
         <div class="server-header">
-            <div class="location">Taiwan 🇹🇼 Server 4</div>
+            <div class="location">Japan 🇯🇵 Server 4</div>
             <div class="ping-status"><span class="ping-dot"></span>Active</div>
         </div>
-        <div class="white-box" id="c4">ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ%3D@r3mrcg00129437x.cybervena.com:50099#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20Onimusha</div>
+        <div class="white-box" id="c4">ss://YWVzLTI1Ni1nY206WEtGS2wyclVMaklwNzQ%3D@103.106.228.175:8009#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%20Onimusha</div>
         <button class="copy-btn" onclick="copyAction('c4')">copy</button>
     </div>
 
@@ -483,7 +483,7 @@
             <div class="location">Japan 🇯🇵 Server 5</div>
             <div class="ping-status"><span class="ping-dot"></span>Active</div>
         </div>
-        <div class="white-box" id="c5">ss://YWVzLTI1Ni1nY206WEtGS2wyclVMaklwNzQ%3D@103.106.228.175:8009#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20Onimusha</div>
+        <div class="white-box" id="c5">ss://YWVzLTI1Ni1nY206R1RaSTVBYmpOQWVXUUcwb1ZOcHR2V0pvZ0hOS2lpS0E%3D@47.79.144.115:40003#%F0%9F%87%AF%F0%9F%87%B5%20%20Japan%20%20Onimusha</div>
         <button class="copy-btn" onclick="copyAction('c5')">copy</button>
     </div>
 
@@ -621,11 +621,11 @@
             if (theme === "dark") {
                 document.documentElement.setAttribute("data-theme", "light");
                 localStorage.setItem("theme", "light");
-                document.getElementById("themeIcon").innerHTML = moonIcon;
+                document.getElementById("themeIcon").innerHTML = moonIcon; // ပြောင်းပြီးရင် လမင်းပုံ (Dark ပြောင်းရန်) ပြမည်
             } else {
                 document.documentElement.setAttribute("data-theme", "dark");
                 localStorage.setItem("theme", "dark");
-                document.getElementById("themeIcon").innerHTML = sunIcon;
+                document.getElementById("themeIcon").innerHTML = sunIcon; // ပြောင်းပြီးရင် နေမင်းပုံ (Light ပြောင်းရန်) ပြမည်
             }
         }
     </script>
