@@ -28,7 +28,7 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', 'Padauk', 'Noto Sans Myanmar', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -57,7 +57,6 @@
             margin: 0;
         }
 
-        /* Theme Toggle Button Style */
         .theme-toggle-btn {
             background: var(--box-bg);
             border: 1px solid var(--primary-red);
@@ -291,7 +290,7 @@
         }
 
         .review-card {
-            display: none; /* JS က အလှည့်ကျ ဖော်ပြပေးမည် */
+            display: none;
             width: 100%;
             animation: fadeEffect 0.6s;
         }
@@ -399,7 +398,7 @@
             background-color: var(--primary-red);
         }
 
-        .ads-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); display: none; justify-content: center; align-items: center; z-index: 10000; }
+        .ads-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); display: none; justify-content: center; align-items: center; z-index: 10000; }
         .ads-content { background: #111; border: 2px solid var(--primary-red); color: white; width: 85%; max-width: 350px; padding: 30px 20px; border-radius: 20px; text-align: center; position: relative; }
         .close-ads { position: absolute; top: -10px; right: -10px; background: var(--primary-red); color: white; border: none; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; font-weight: bold; }
         .pop-btn { padding: 12px; text-decoration: none; color: white; border-radius: 10px; font-weight: bold; display: block; margin-top: 10px; background: #222; border: 1px solid var(--primary-red); }
@@ -415,9 +414,9 @@
             <button class="close-ads" onclick="closeAds()">X</button>
             <h3 style="margin:0; color:var(--primary-red);">Premium Vpn Key ဝယ်ယူရန်</h3>
             <p style="color:#aaa;"> ❄︎ 50GB - 3000 Ks <br> ❄︎ 100GB - 5000 Ks <br> ❄︎ 200GB - 10000 Ks <br> ⬇ More Info ⬇ </p>
-            <a href="https://t.me/onimushatech" class="pop-btn">Telegram Channel</a>
-            <a href="https://www.facebook.com/onimushamm" class="pop-btn">Facebook Page</a>
-            <a href="https://connect.viber.com/business/f8c0a834-07ce-11f1-a60a-aa49d1a7a8c8" class="pop-btn">Viber Business</a>
+            <a href="https://t.me/onimushatech" class="pop-btn" target="_blank">Telegram Channel</a>
+            <a href="https://www.facebook.com/onimushamm" class="pop-btn" target="_blank">Facebook Page</a>
+            <a href="https://connect.viber.com/business/f8c0a834-07ce-11f1-a60a-aa49d1a7a8c8" class="pop-btn" target="_blank">Viber Business</a>
         </div>
     </div>
 
@@ -442,63 +441,57 @@
         </a>
     </div>
 
-    <!-- Server 1: Singapore -->
     <div class="container">
         <div class="server-header">
-            <div class="location">Australia 🇦🇺 Server 1</div>
+            <div class="location">Germany 🇩🇪 Server 1</div>
             <div class="ping-status"><span class="ping-dot"></span>Active</div>
         </div>
-        <div class="white-box" id="c1">ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpUV0c3SjFLUjVLc1BhVjVxWkkrcmlldWVLeHhhZlpTcENI@45.77.232.213:15675#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20Onimusha</div>
+        <div class="white-box" id="c1">ss://Y2hhY2xhMjAtaWV0Zi1wb2x5MTMwNTpoMkdOUDZ4enNzMHhRNWtmN0JOY0pJ@46.224.2.35:47199#%F0%9F%87%A9%F0%9F%87%AA%20Falkenstein%2C%20SN%2C%20Germany</div>
         <button class="copy-btn" onclick="copyAction('c1')">copy</button>
     </div>
 
-    <!-- Server 2: United States -->
     <div class="container">
         <div class="server-header">
-            <div class="location">India 🇮🇳 Server 2</div>
+            <div class="location">Netherlands 🇳🇱 Server 2</div>
             <div class="ping-status"><span class="ping-dot"></span>Active</div>
         </div>
-        <div class="white-box" id="c2">ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXT2lyM2xYQmhNSERjTEZQUWRFWlhQdTM3X3BUUURDWGZt@103.111.114.80:28061#%F0%9F%87%AE%F0%9F%87%B3%20India%20Onimusha</div>
+        <div class="white-box" id="c2">ss://Y2hhY2xhMjAtaWV0Zi1wb2x5MTMwNTp1aUE4eUMzbjBkSnhPS0R5MHdMaGRz@5.253.59.156:32140#%F0%9F%87%B3%F0%9F%87%B1%20Amsterdam%2C%20NH%2C%20The%20Netherlands</div>
         <button class="copy-btn" onclick="copyAction('c2')">copy</button>
     </div>
 
-    <!-- Server 3: Taiwan (A) -->
     <div class="container">
         <div class="server-header">
-            <div class="location">Taiwan 🇹🇼 Server 3</div>
+            <div class="location">Lithuania 🇱🇹 Server 3</div>
             <div class="ping-status"><span class="ping-dot"></span>Active</div>
         </div>
-        <div class="white-box" id="c3">ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ%3D@r3mrcg001286ek2.cybervena.com:50099#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20Onimusha</div>
+        <div class="white-box" id="c3">ss://Y2hhY2xhMjAtaWV0Zi1wb2x5MTMwNTo0THVTUWx1V3MzbWVBeTV2T283aWta@80.208.229.172:443#%F0%9F%87%B1%F0%9F%87%B9%20Vilnius%2C%20VL%2C%20Lithuania</div>
         <button class="copy-btn" onclick="copyAction('c3')">copy</button>
     </div>
 
-    <!-- Server 4: France -->
     <div class="container">
         <div class="server-header">
-            <div class="location">Japan 🇯🇵 Server 4</div>
+            <div class="location">United States 🇺🇸 Server 4</div>
             <div class="ping-status"><span class="ping-dot"></span>Active</div>
         </div>
-        <div class="white-box" id="c4">ss://YWVzLTI1Ni1nY206WEtGS2wyclVMaklwNzQ%3D@103.106.228.175:8009#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20Onimusha</div>
+        <div class="white-box" id="c4">ss://Y2hhY2xhMjAtaWV0Zi1wb2x5MTMwNTpyX05SZS0rV1JxMnpWcU1wQ25KdFRFU2xUOFd5ZmZIeUZ5@38.54.80.160:16292#%F0%9F%87%BA%F0%9F%87%B8%20United%20States</div>
         <button class="copy-btn" onclick="copyAction('c4')">copy</button>
     </div>
 
-    <!-- Server 5: Germany -->
     <div class="container">
         <div class="server-header">
-            <div class="location">Japan 🇯🇵 Server 5</div>
+            <div class="location">Netherlands 🇳🇱 Server 5</div>
             <div class="ping-status"><span class="ping-dot"></span>Active</div>
         </div>
-        <div class="white-box" id="c5">ss://YWVzLTI1Ni1nY206R1RaSTVBYmpOQWVXUUcwb1ZOcHR2V0pvZ0hOS2lpS0E%3D@47.79.144.115:40003#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20Onimusha</div>
+        <div class="white-box" id="c5">ss://Y2hhY2xhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.218:8080#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands</div>
         <button class="copy-btn" onclick="copyAction('c5')">copy</button>
     </div>
 
-    <!-- Server 6: Taiwan (B) -->
     <div class="container">
         <div class="server-header">
-            <div class="location">United States 🇺🇸 Server 6</div>
+            <div class="location">Australia 🇦🇺 Server 6</div>
             <div class="ping-status"><span class="ping-dot"></span>Active</div>
         </div>
-        <div class="white-box" id="c6">ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpyX05SZS0rV1JxMnpWcU1wQ25KdFRFU2xUOFd5ZmZIeUZ5@38.54.80.160:16292#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20Onimusha</div>
+        <div class="white-box" id="c6">ss://YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M%3D@103.106.231.82:5600#%F0%9F%87%A6%F0%9F%87%BA%20Sydney%2C%20NSW%2C%20Australia%20%281%29</div>
         <button class="copy-btn" onclick="copyAction('c6')">copy</button>
     </div>
 
@@ -523,9 +516,10 @@
                 <p class="review-text">"Viber ကနေ သေသေချာချာ လမ်းညွှန်ပေးလို့ အဆင်ပြေသွားပြီဗျာ။ Admin ရဲ့ Service က 10/10 ပဲ။"</p>
                 <span class="review-user">- Zeyar Linn</span>
             </div>
+
             <div class="review-card">
                 <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p class="review-text">"Premium key ဝယ်သုံးတာ တစ်နှစ်ပြည့်တော့မယ် အမြဲ ရက်အပို Gb အပိုတွေထည့်ပေးလို့ကျေးဇူးပါ</p>
+                <p class="review-text">"Premium key ဝယ်သုံးတာ တစ်နှစ်ပြည့်တော့မယ် အမြဲ ရက်အပို Gb အပိုတွေထည့်ပေးလို့ကျေးဇူးပါ"</p>
                 <span class="review-user">- Yair Kyaw Thu</span>
             </div>
 
@@ -541,7 +535,7 @@
                 <span>+</span>
             </div>
             <div class="faq-answer">
-                အခုပေးထားတဲ့ Key တွေကို Android,Ios, Window,Mac တို့နဲ့ v2rayNG, Hiddiffy,V2box,Happ...အစရှိတဲ့ app တွေထဲမှာ ထည့်သွင်းအသုံးပြုနိုင်ပါတယ်ဗျာ။
+                အခုပေးထားတဲ့ Key တွေကို Android, iOS, Windows, Mac တို့နဲ့ v2rayNG, Hiddify, V2box, NapsternetV အစရှိတဲ့ app တွေထဲမှာ ထည့်သွင်းအသုံးပြုနိုင်ပါတယ်ဗျာ။
             </div>
         </div>
 
@@ -558,15 +552,20 @@
 
     <div class="bottom-nav">
         <a href="https://onimushar.github.io/" class="nav-btn">Home</a>
-        <a href="https://t.me/onimushatech" class="nav-btn">Telegram</a>
-        <a href="https://www.facebook.com/onimushamm" class="nav-btn">Facebook</a>
+        <a href="https://t.me/onimushatech" class="nav-btn" target="_blank">Telegram</a>
+        <a href="https://www.facebook.com/onimushamm" class="nav-btn" target="_blank">Facebook</a>
     </div>
 
     <script>
-        // Ads Script
-        function showAds() { document.getElementById("adsBox").style.display = "flex"; }
-        setInterval(showAds, 5000); // 5 စက္ကန့်တိုင်း Ads ပြမည်
-        function closeAds() { document.getElementById("adsBox").style.display = "none"; }
+        // Ads Script (၅ စက္ကန့်ပြည့်တိုင်း အလိုအလျောက် ပွင့်လာမည့် နေရာ)
+        function showAds() { 
+            document.getElementById("adsBox").style.display = "flex"; 
+        }
+        setInterval(showAds, 5000); // 5000ms = ၅ စက္ကန့်တိုင်း ထပ်ခါတလဲလဲ ပွင့်မည်
+        
+        function closeAds() { 
+            document.getElementById("adsBox").style.display = "none"; 
+        }
 
         // Copy Clipboard Action
         function copyAction(id) {
@@ -583,10 +582,11 @@
             setTimeout(() => toast.style.display = "none", 1500);
         }
 
-        // FAQ Toggle
+        // Fixed FAQ Toggle Logic
         function toggleFaq(element) {
             const answer = element.nextElementSibling;
             const icon = element.querySelectorAll('span')[1];
+            
             if (answer.style.maxHeight && answer.style.maxHeight !== "0px") {
                 answer.style.maxHeight = "0px";
                 answer.style.padding = "0px 15px";
@@ -598,7 +598,7 @@
             }
         }
 
-        // Reviews Static Slider Logic
+        // Reviews Slider Logic
         let reviewIndex = 0;
         showReviews();
         function showReviews() {
@@ -610,14 +610,13 @@
             reviewIndex++;
             if (reviewIndex > reviews.length) {reviewIndex = 1}    
             reviews[reviewIndex-1].style.display = "block";  
-            setTimeout(showReviews, 4000); // ၄ စက္ကန့်တိုင်း အလိုအလျောက် ပြောင်းလဲမည်
+            setTimeout(showReviews, 4000); 
         }
 
         // Dark/Light Mode Switcher Logic
         const sunIcon = `<path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-12.37c-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06c.39-.38.39-1.02 0-1.41zm-12.37 12.37c-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06c.39-.38.39-1.02 0-1.41z"/>`;
         const moonIcon = `<path d="M12.3 2a10 10 0 0 0-1.9 14 10 10 0 0 0 14-1.9 1 1 0 0 0-1-1.3 8 8 0 1 1-9.8-9.8 1 1 0 0 0-1.3-1z"/>`;
         
-        // Initial Theme Check (Default: Dark)
         let currentTheme = localStorage.getItem("theme") || "dark";
         document.documentElement.setAttribute("data-theme", currentTheme);
         document.getElementById("themeIcon").innerHTML = currentTheme === "light" ? moonIcon : sunIcon;
@@ -627,11 +626,11 @@
             if (theme === "dark") {
                 document.documentElement.setAttribute("data-theme", "light");
                 localStorage.setItem("theme", "light");
-                document.getElementById("themeIcon").innerHTML = moonIcon; // ပြောင်းပြီးရင် လမင်းပုံ (Dark ပြောင်းရန်) ပြမည်
+                document.getElementById("themeIcon").innerHTML = moonIcon; 
             } else {
                 document.documentElement.setAttribute("data-theme", "dark");
                 localStorage.setItem("theme", "dark");
-                document.getElementById("themeIcon").innerHTML = sunIcon; // ပြောင်းပြီးရင် နေမင်းပုံ (Light ပြောင်းရန်) ပြမည်
+                document.getElementById("themeIcon").innerHTML = sunIcon; 
             }
         }
     </script>
